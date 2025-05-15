@@ -20,7 +20,8 @@ ITEM_PIPELINES = {
 }
 # 动态输出路径（使用爬虫名作为文件名部分）
 import os
-output_dir = 'E:/ScrapyProject/AutoCarScrapy/scrapy_demo/output/'
+output_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'output')
+#output_dir = 'E:/ScrapyProject/AutoCarScrapy/scrapy_demo/output/'
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
 
